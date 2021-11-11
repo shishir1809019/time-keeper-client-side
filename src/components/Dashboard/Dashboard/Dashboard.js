@@ -44,10 +44,10 @@ function Dashboard(props) {
   const drawer = (
     <div>
       <Toolbar />
-      <NavLink style={{ textDecoration: "none", color: "white" }} to="/explore">
+      <NavLink style={{ textDecoration: "none", color: "black" }} to="/explore">
         <Button color="inherit">Our All Products</Button>
       </NavLink>
-      <NavLink style={{ textDecoration: "none", color: "white" }} to={`${url}`}>
+      <NavLink style={{ textDecoration: "none", color: "black" }} to={`${url}`}>
         <Button color="inherit">Dashboard</Button>
       </NavLink>
       <br />
