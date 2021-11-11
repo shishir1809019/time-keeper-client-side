@@ -7,7 +7,7 @@ const ManageAllPurchases = () => {
   const [recall, setRecall] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/dashboard/allPurchases")
+    fetch("https://calm-headland-36489.herokuapp.com/dashboard/allPurchases")
       .then((res) => res.json())
       .then((data) => setAllPurchases(data));
   }, [recall]);
@@ -16,9 +16,12 @@ const ManageAllPurchases = () => {
     console.log(id);
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/dashboard/purchase/${id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://calm-headland-36489.herokuapp.com/dashboard/purchase/${id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
@@ -29,13 +32,16 @@ const ManageAllPurchases = () => {
     }
   };
   const handleUpdatePurchase = (id) => {
-    fetch(`http://localhost:5000/dashboard/purchaseStatus/${id}`, {
-      method: "PUT",
-      //   headers: {
-      //     "content-type": "application/json",
-      //   },
-      //   body: JSON.stringify()
-    })
+    fetch(
+      `https://calm-headland-36489.herokuapp.com/dashboard/purchaseStatus/${id}`,
+      {
+        method: "PUT",
+        //   headers: {
+        //     "content-type": "application/json",
+        //   },
+        //   body: JSON.stringify()
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

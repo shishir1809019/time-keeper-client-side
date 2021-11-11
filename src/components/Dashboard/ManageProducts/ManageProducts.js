@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const { isLoading, setIsLoading } = useAuth();
   useEffect(() => {
-    fetch("http://localhost:5000/watches")
+    fetch("https://calm-headland-36489.herokuapp.com/watches")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -17,9 +17,12 @@ const ManageProducts = () => {
     console.log(id);
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/dashboard/watches/${id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://calm-headland-36489.herokuapp.com/dashboard/watches/${id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {

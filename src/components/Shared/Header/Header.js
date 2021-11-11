@@ -9,6 +9,7 @@ const Header = () => {
   return (
     <>
       <Navbar
+        style={{ zIndex: "9999" }}
         collapseOnSelect
         expand="lg"
         bg="dark"

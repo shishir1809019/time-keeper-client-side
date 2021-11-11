@@ -7,7 +7,7 @@ const MyPurchases = () => {
   const { user } = useAuth();
   const [myPurchases, setMyPurchases] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/myPurchases/${user.email}`)
+    fetch(`https://calm-headland-36489.herokuapp.com/myPurchases/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyPurchases(data);
@@ -18,7 +18,7 @@ const MyPurchases = () => {
     console.log(id);
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/purchase/${id}`, {
+      fetch(`https://calm-headland-36489.herokuapp.com/purchase/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

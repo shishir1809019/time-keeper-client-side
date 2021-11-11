@@ -9,7 +9,7 @@ const Review = () => {
   const onSubmit = (data) => {
     console.log(data);
     data.email = user.email;
-    fetch("http://localhost:5000/review", {
+    fetch("https://calm-headland-36489.herokuapp.com/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

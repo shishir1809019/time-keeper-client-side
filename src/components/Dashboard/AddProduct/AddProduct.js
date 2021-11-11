@@ -6,7 +6,7 @@ const AddProduct = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    fetch("http://localhost:5000/dashboard/addProduct", {
+    fetch("https://calm-headland-36489.herokuapp.com/dashboard/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",

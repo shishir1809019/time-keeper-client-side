@@ -9,7 +9,7 @@ const Purchase = () => {
   const [purchaseProduct, setPurchaseProduct] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/watch/${id}`)
+    fetch(`https://calm-headland-36489.herokuapp.com/watch/${id}`)
       .then((res) => res.json())
       .then((data) => setPurchaseProduct(data));
   }, []);
@@ -22,7 +22,7 @@ const Purchase = () => {
     data.purchaseProduct = purchaseProduct.name;
     data.status = "pending";
     console.log(data);
-    fetch("http://localhost:5000/purchase", {
+    fetch("https://calm-headland-36489.herokuapp.com/purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",

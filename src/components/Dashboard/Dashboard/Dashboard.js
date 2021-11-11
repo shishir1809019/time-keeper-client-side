@@ -1,6 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
@@ -8,15 +7,12 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useParams,
   useRouteMatch,
 } from "react-router-dom";
 import DashboardHome from "../DashboardHome/DashboardHome";
@@ -31,7 +27,7 @@ import AdminRoute from "../../AdminRoute/AdminRoute";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import ManageAllPurchases from "../ManageAllPurchases/ManageAllPurchases";
 
-const drawerWidth = 200;
+const drawerWidth = 220;
 
 function Dashboard(props) {
   const { window } = props;
@@ -58,7 +54,7 @@ function Dashboard(props) {
       {!admin && (
         <Box>
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/payment`}
           >
             <Button variant="text" color="inherit">
@@ -67,14 +63,14 @@ function Dashboard(props) {
           </NavLink>
           <br />
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/myPurchases`}
           >
             <Button color="inherit">My Purchases</Button>
           </NavLink>
           <br />
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/review`}
           >
             <Button color="inherit">Review</Button>
@@ -84,25 +80,25 @@ function Dashboard(props) {
       {admin && (
         <Box>
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/makeAdmin`}
           >
             <Button color="inherit">Make Admin</Button>
           </NavLink>
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/addProduct`}
           >
             <Button color="inherit">Add Product</Button>
           </NavLink>
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/manageProducts`}
           >
             <Button color="inherit">Manage Products</Button>
           </NavLink>
           <NavLink
-            style={{ textDecoration: "none", color: "white" }}
+            style={{ textDecoration: "none", color: "black" }}
             to={`${url}/manageAllPurchases`}
           >
             <Button color="inherit">Manage All Purchases</Button>
@@ -110,7 +106,7 @@ function Dashboard(props) {
         </Box>
       )}
       <Divider sx={{ marginTop: "100%" }} />
-      <NavLink style={{ textDecoration: "none", color: "white" }} to={`${url}`}>
+      <NavLink style={{ textDecoration: "none", color: "black" }} to={`${url}`}>
         <Button color="inherit" onClick={logOut}>
           Logout
         </Button>
@@ -223,10 +219,6 @@ function Dashboard(props) {
 }
 
 Dashboard.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
