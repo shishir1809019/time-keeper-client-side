@@ -1,0 +1,10 @@
+:root {
+  --topNavbarHeight: 56px;
+}
+
+@media (min-width: 992px) {
+  .sidebar-nav {
+    top: var(--topNavbarHeight);
+    height: calc(100% - var(--topNavbarHeight));
+  }
+}

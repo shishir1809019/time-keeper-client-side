@@ -1,0 +1,14 @@
+.css-1d9c4l9-MuiDrawer-docked .MuiDrawer-paper {
+  margin-top: 56px;
+  background: linear-gradient(#212528, #506677);
+}
+
+@media (max-width: 600px) {
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  button:not(:disabled) {
+    cursor: pointer;
+    color: black;
+  }
+}
