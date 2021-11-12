@@ -4,8 +4,7 @@ import SwiperCore, { Pagination, Navigation } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "./Testimonials.css";
-import Testimonial from "../Testimonial/Testimonial";
-import { Row } from "react-bootstrap";
+import StarRating from "../StarRating/StarRating";
 
 SwiperCore.use([Navigation, Pagination]);
 const Testimonials = () => {
@@ -17,7 +16,7 @@ const Testimonials = () => {
   });
 
   return (
-    <>
+    <div className="my-5">
       <h2 className="my-4 text-center">Testimonials</h2>
       <Swiper
         slidesPerView={3}
@@ -28,15 +27,18 @@ const Testimonials = () => {
         }}
         className="mySwiper"
       >
-        {reviews.map((feedback, index) => (
+        {reviews.map((review, index) => (
           <SwiperSlide className="mb-5 bg-dark text-light rounded ">
-            {index + 1}. {feedback.name}
-            <br /> {feedback.description}
-            <br /> Customer
+            <div style={{ height: "175px" }} className="my-5">
+              {index + 1}. {review.name}
+              <br /> {review.description.slice(0, 85)}
+              <StarRating rating={review.rating}></StarRating>
+              <br /> <h5 className="text-danger">Customer</h5>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

@@ -37,7 +37,7 @@ const Review = () => {
         <input
           className="form-control  mb-1"
           placeholder="Enter a ratting out of 5"
-          {...register("ratting", { required: true })}
+          {...register("rating", { required: true })}
         />
         <textarea
           className="form-control  mb-2"

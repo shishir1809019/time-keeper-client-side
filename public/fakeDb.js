@@ -70,3 +70,22 @@ const data = [
       "Luxury watches are manufactured with a significantly higher and usually a manual effort. Watch productions in Europe and Switzerland lead necessarily to much higher costs than for a watch produced in Asia.",
   },
 ];
+const data2 = [
+  {
+    name: "Falica L. Brooks",
+    rating: 4.8,
+    description: "This is just a awesome website for  ticket booking service.",
+  },
+  {
+    name: "Heidi J. Cobb",
+    rating: 5,
+    description:
+      "I dod't not find my any email of confirmation . Please response",
+  },
+  {
+    name: "Franke C.McGee",
+    rating: 4.0,
+    description:
+      "Awesome there ticket price is too relevant. This is useful for us",
+  },
+];

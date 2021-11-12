@@ -50,7 +50,7 @@ function Dashboard(props) {
       <NavLink style={{ textDecoration: "none", color: "black" }} to={`${url}`}>
         <Button color="inherit">Dashboard</Button>
       </NavLink>
-      <br />
+      <Divider sx={{ mb: 2 }} />
       {!admin && (
         <Box>
           <NavLink
