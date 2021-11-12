@@ -18,6 +18,7 @@ initializeAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [admin, setAdmin] = useState(false);
+  const [isAdminStatusLoad, setIsAdminStatusLoad] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [token, setToken] = useState("");
 
@@ -57,10 +58,12 @@ const useFirebase = () => {
   };
 
   const registerNewUser = (email, password, name) => {
+    setIsLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const processLogin = () => {
+    setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const setUserName = () => {
@@ -105,12 +108,15 @@ const useFirebase = () => {
   useEffect(() => {
     fetch(`https://calm-headland-36489.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
-      .then((data) => setAdmin(data.admin));
+      .then((data) => {
+        setAdmin(data.admin);
+      });
   }, [user.email]);
 
   return {
     name,
     admin,
+    isAdminStatusLoad,
     token,
     user,
     error,

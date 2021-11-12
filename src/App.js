@@ -12,6 +12,7 @@ import Explore from "./components/Explore/Explore";
 import Purchase from "./components/Purchase/Purchase";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
+            <Route path="*">
+              <NotFound />
+            </Route>
           </Switch>
           <Footer />
         </Router>

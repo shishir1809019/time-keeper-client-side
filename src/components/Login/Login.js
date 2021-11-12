@@ -61,6 +61,9 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
   return (

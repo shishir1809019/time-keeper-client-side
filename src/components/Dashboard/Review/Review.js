@@ -9,6 +9,7 @@ const Review = () => {
   const onSubmit = (data) => {
     console.log(data);
     data.email = user.email;
+    data.date = new Date().toLocaleDateString();
     fetch("https://calm-headland-36489.herokuapp.com/review", {
       method: "POST",
       headers: {
@@ -39,6 +40,7 @@ const Review = () => {
           placeholder="Enter a ratting out of 5"
           {...register("rating", { required: true })}
         />
+
         <textarea
           className="form-control  mb-2"
           placeholder="Enter your opinion about our products or services"

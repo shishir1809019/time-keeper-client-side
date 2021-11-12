@@ -27,13 +27,14 @@ const Testimonials = () => {
         }}
         className="mySwiper"
       >
-        {reviews.map((review, index) => (
+        {reviews?.map((review, index) => (
           <SwiperSlide className="mb-5 bg-dark text-light rounded ">
             <div style={{ height: "175px" }} className="my-5">
               {index + 1}. {review.name}
               <br /> {review.description.slice(0, 85)}
               <StarRating rating={review.rating}></StarRating>
               <br /> <h5 className="text-danger">Customer</h5>
+              <span>{review?.date}</span>
             </div>
           </SwiperSlide>
         ))}
