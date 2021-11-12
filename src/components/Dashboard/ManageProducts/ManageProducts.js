@@ -14,7 +14,7 @@ const ManageProducts = () => {
       });
   }, []);
   const handleDeleteProduct = (id) => {
-    console.log(id);
+    // console.log(id);
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
       fetch(

@@ -3,8 +3,8 @@ import { Redirect, Route } from "react-router";
 import useAuth from "../../hooks/useAuth";
 
 const AdminRoute = ({ children, ...rest }) => {
-  const { admin, isLoading } = useAuth();
-  if (isLoading) {
+  const { admin } = useAuth();
+  if (!admin) {
     return <h5 className="text-center text-danger">Loading...</h5>;
   }
   return (

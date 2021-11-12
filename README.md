@@ -2,7 +2,7 @@
 
 Website live-link: https://time-keeper-6a6bf.web.app/
 
-Server-side-link: https://github.com/programming-hero-web-course-4/niche-website-server-side-shishir1809019
+Server-side-code-link: https://github.com/programming-hero-web-course-4/niche-website-server-side-shishir1809019
 
 - In this website I have used - **MongoDB || Node || Express || React || React router || React Bootstrap || React-stars-component || Material UI || Firebase || Firebase idToken || ContextApi || CSS & HTML**
 - In this website I had showed some watch with those name , price , description.
