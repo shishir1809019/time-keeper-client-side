@@ -17,7 +17,7 @@ const Header = () => {
         sticky="top"
       >
         <Container>
-          <Navbar.Brand as={Link} to="/home">
+          <Navbar.Brand as={Link} to="/">
             Time Keeper
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -27,7 +27,7 @@ const Header = () => {
             className="justify-content-end"
           >
             <Nav>
-              <Nav.Link as={Link} to="/home#home">
+              <Nav.Link as={Link} to="/home">
                 Home
               </Nav.Link>
               <Nav.Link as={Link} to="/explore">
