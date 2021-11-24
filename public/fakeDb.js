@@ -74,18 +74,22 @@ const data2 = [
   {
     name: "Falica L. Brooks",
     rating: 4.8,
-    description: "This is just a awesome website for  ticket booking service.",
+    description:
+      "This is just a awesome and time saving website for  ticket booking service.",
+    date: "11/11/2021",
   },
   {
     name: "Heidi J. Cobb",
     rating: 5,
     description:
-      "I dod't not find my any email of confirmation . Please response",
+      "I dod't not find my any email of confirmation . Please response as soon as possible",
+    date: "11/12/2021",
   },
   {
     name: "Franke C.McGee",
     rating: 4.0,
     description:
-      "Awesome there ticket price is too relevant. This is useful for us",
+      "Awesome there ticket price is too relevant. This is useful for us and like it",
+    date: "11/12/2021",
   },
 ];
