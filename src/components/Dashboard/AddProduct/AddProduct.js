@@ -6,7 +6,7 @@ const AddProduct = () => {
   const onSubmit = (data) => {
     console.log(data);
 
-    fetch("https://calm-headland-36489.herokuapp.com/dashboard/addProduct", {
+    fetch("https://time-keeper-server-api.vercel.app/dashboard/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",

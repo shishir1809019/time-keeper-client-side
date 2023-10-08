@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://calm-headland-36489.herokuapp.com/users/admin", {
+    fetch("https://time-keeper-server-api.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,

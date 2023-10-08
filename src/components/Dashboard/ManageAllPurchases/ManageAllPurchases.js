@@ -7,7 +7,7 @@ const ManageAllPurchases = () => {
   const [recall, setRecall] = useState(null);
 
   useEffect(() => {
-    fetch("https://calm-headland-36489.herokuapp.com/dashboard/allPurchases")
+    fetch("https://time-keeper-server-api.vercel.app/dashboard/allPurchases")
       .then((res) => res.json())
       .then((data) => setAllPurchases(data));
   }, [recall]);
@@ -17,7 +17,7 @@ const ManageAllPurchases = () => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
       fetch(
-        `https://calm-headland-36489.herokuapp.com/dashboard/purchase/${id}`,
+        `https://time-keeper-server-api.vercel.app/dashboard/purchase/${id}`,
         {
           method: "DELETE",
         }
@@ -33,7 +33,7 @@ const ManageAllPurchases = () => {
   };
   const handleUpdatePurchase = (id) => {
     fetch(
-      `https://calm-headland-36489.herokuapp.com/dashboard/purchaseStatus/${id}`,
+      `https://time-keeper-server-api.vercel.app/dashboard/purchaseStatus/${id}`,
       {
         method: "PUT",
         //   headers: {

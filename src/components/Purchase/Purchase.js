@@ -9,7 +9,7 @@ const Purchase = () => {
   const [purchaseProduct, setPurchaseProduct] = useState({});
 
   useEffect(() => {
-    fetch(`https://calm-headland-36489.herokuapp.com/watch/${id}`)
+    fetch(`https://time-keeper-server-api.vercel.app/watch/${id}`)
       .then((res) => res.json())
       .then((data) => setPurchaseProduct(data));
   }, []);
@@ -22,7 +22,7 @@ const Purchase = () => {
     data.purchaseProduct = purchaseProduct.name;
     data.status = "pending";
     console.log(data);
-    fetch("https://calm-headland-36489.herokuapp.com/purchase", {
+    fetch("https://time-keeper-server-api.vercel.app/purchase", {
       method: "POST",
       headers: {
         "content-type": "application/json",

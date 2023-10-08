@@ -10,7 +10,7 @@ SwiperCore.use([Navigation, Pagination]);
 const Testimonials = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("https://calm-headland-36489.herokuapp.com/reviews")
+    fetch("https://time-keeper-server-api.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   });

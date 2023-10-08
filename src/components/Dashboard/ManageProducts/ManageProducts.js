@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const { isLoading, setIsLoading } = useAuth();
   useEffect(() => {
-    fetch("https://calm-headland-36489.herokuapp.com/watches")
+    fetch("https://time-keeper-server-api.vercel.app/watches")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -18,7 +18,7 @@ const ManageProducts = () => {
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
       fetch(
-        `https://calm-headland-36489.herokuapp.com/dashboard/watches/${id}`,
+        `https://time-keeper-server-api.vercel.app/dashboard/watches/${id}`,
         {
           method: "DELETE",
         }

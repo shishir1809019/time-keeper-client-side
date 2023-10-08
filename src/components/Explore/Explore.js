@@ -6,7 +6,7 @@ const Explore = () => {
   const [watches, setWatches] = useState([]);
   const [dataLoad, setDataLoad] = useState(true);
   useEffect(() => {
-    fetch("https://calm-headland-36489.herokuapp.com/watches")
+    fetch("https://time-keeper-server-api.vercel.app/watches")
       .then((res) => res.json())
       .then((data) => setWatches(data))
       .finally(() => {

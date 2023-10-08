@@ -95,7 +95,7 @@ const useFirebase = () => {
   //save login info to database
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://calm-headland-36489.herokuapp.com/users", {
+    fetch("https://time-keeper-server-api.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -106,7 +106,7 @@ const useFirebase = () => {
 
   //admin role load
   useEffect(() => {
-    fetch(`https://calm-headland-36489.herokuapp.com/users/${user.email}`)
+    fetch(`https://time-keeper-server-api.vercel.app/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);

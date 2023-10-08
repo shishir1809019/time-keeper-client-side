@@ -10,7 +10,7 @@ const Review = () => {
     console.log(data);
     data.email = user.email;
     data.date = new Date().toLocaleDateString();
-    fetch("https://calm-headland-36489.herokuapp.com/review", {
+    fetch("https://time-keeper-server-api.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

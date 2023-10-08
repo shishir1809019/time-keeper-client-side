@@ -7,7 +7,7 @@ const MyPurchases = () => {
   const { user } = useAuth();
   const [myPurchases, setMyPurchases] = useState([]);
   useEffect(() => {
-    fetch(`https://calm-headland-36489.herokuapp.com/myPurchases/${user.email}`)
+    fetch(`https://time-keeper-server-api.vercel.app/myPurchases/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyPurchases(data);
@@ -18,7 +18,7 @@ const MyPurchases = () => {
     console.log(id);
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      fetch(`https://calm-headland-36489.herokuapp.com/purchase/${id}`, {
+      fetch(`https://time-keeper-server-api.vercel.app/purchase/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
